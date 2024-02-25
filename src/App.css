@@ -96,3 +96,32 @@ textarea {
     opacity: 1;
   }
 }
+
+.button-loader {
+  position: relative;
+}
+
+.button-loader::before,
+.button-loader::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: loader-animation 1s linear infinite;
+}
+
+.button-loader::after {
+  animation-delay: 0.5s;
+}
+
+@keyframes loader-animation {
+  0% { width: 20px; height: 20px; opacity: 0.5; }
+  50% { width: 40px; height: 40px; opacity: 1; }
+  100% { width: 20px; height: 20px; opacity: 0.5; }
+}
