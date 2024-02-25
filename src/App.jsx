@@ -52,7 +52,7 @@ function App() {
         </div>
         <div className="center-box">
           <textarea onChange={(e) => setPrompt(e.target.value)} placeholder="Type something..." />
-          <button onClick={() => (!loading && getTTS())} className={`gradient-button ${loading ? 'button-loader': ''}`}>Go</button>
+          <button onClick={() => (!loading && color === 'pink' && getTTS())} className={`gradient-button ${loading ? 'button-loader': ''}`}>Go</button>
         </div>
       </div>
     </>
