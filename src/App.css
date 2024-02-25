@@ -1,0 +1,98 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #4b6cb7, #182848);
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  height: 55vh;
+  justify-content: space-between;
+}
+
+.fractal-header {
+  display: flex;
+  align-items: center;
+  margin: 0 5px 0 5px;
+}
+
+.fractal-header img {
+  margin-right: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
+  background: linear-gradient(to bottom, #4b6cb7, #182848);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.center-box {
+  text-align: center;
+  margin-bottom: 12vh;
+}
+
+textarea {
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  width: 80%;
+  max-width: 400px;
+  height: 75%;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #fff, #f0f0f0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-button {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  color: #fff;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(to right, #182848, #4b6cb7);
+}
+
+.gradient-button:hover:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(45deg);
+  animation: shine 1s linear forwards;
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-150%) rotate(45deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(150%) rotate(45deg);
+    opacity: 1;
+  }
+}
