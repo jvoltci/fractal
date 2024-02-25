@@ -13,8 +13,6 @@
   color: #fff;
   padding: 20px;
   border-radius: 20px;
-  height: 55vh;
-  justify-content: space-between;
 }
 
 .fractal-header {
@@ -41,7 +39,8 @@
 
 .center-box {
   text-align: center;
-  margin-bottom: 12vh;
+  margin-top: 12vh;
+  margin-bottom: 2vh;
 }
 
 textarea {
@@ -50,9 +49,10 @@ textarea {
   font-size: 20px;
   width: 80%;
   max-width: 400px;
-  height: 75%;
+  height: 16vh;
   border: none;
   border-radius: 15px;
+  resize: none;
   background: linear-gradient(to bottom, #fff, #f0f0f0);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -124,4 +124,14 @@ textarea {
   0% { width: 20px; height: 20px; opacity: 0.5; }
   50% { width: 40px; height: 40px; opacity: 1; }
   100% { width: 20px; height: 20px; opacity: 0.5; }
+}
+
+@media (max-width: 768px) {
+  .header {
+    background-size: contain;
+  }
+
+  .gradient-button {
+    margin-top: 20px;
+  }
 }
